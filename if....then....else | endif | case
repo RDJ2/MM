@@ -1,0 +1,49 @@
+a]IF...THEN...ELSE
+DECLARE
+  a INT:= 99;
+BEGIN 
+IF (a=19) THEN
+  dbms_output.put_line('the a is less than 20');
+ELSE 
+  dbms_output.put_line('the a is more than 20');
+END IF;
+END;
+
+
+
+
+
+a]IF...ELSE...ELSE...END IF
+DECLARE
+ a number(3):=100;
+BEGIN
+IF(a>80) THEN
+ dbms_output.put_line('A Grade');
+ELSIF(a<80)THEN
+ dbms_output.put_line('B Grade ');
+ELSE
+  dbms_output.put_line('Failed ');
+END IF;
+ dbms_output.put_line('Your Marks are '||a) ;
+END;
+
+
+
+
+
+
+b]CASE statement
+DECLARE
+ show char(1):='A';
+BEGIN
+
+case show
+
+When 'A'then dbms_output.put_line('Excellent');
+When 'B'then dbms_output.put_line('Very Good');
+When 'C'then dbms_output.put_line('Good');
+When 'D'then dbms_output.put_line('Averge');
+When 'F'then dbms_output.put_line('Passed with Grace');
+else dbms_output.put_line('Faild');
+END case;
+END;
