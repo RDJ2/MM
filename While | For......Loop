@@ -1,0 +1,18 @@
+a]while-loop statement
+DECLARE
+i integer:=1;
+BEGIN
+WHILE i<=10 LOOP
+dbms_output.put_line(i);
+i:=i+1;
+END LOOP;
+END;
+
+
+b]For-loop statement
+BEGIN
+FOR k IN 1..10 LOOP
+dbms_output.put_line(k);
+END LOOP;
+END;
+ 
