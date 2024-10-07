@@ -1,0 +1,37 @@
+a]GoTo statement 
+DECLARE
+  a NUMBER := 30;
+BEGIN
+<<loop_start>>
+WHILE a < 45 LOOP
+DBMS_OUTPUT .PUT_LINE('value of a: ' || a);
+a := a + 1;
+IF a = 20 THEN
+a := a + 1;
+GOTO loop_start;
+END IF;
+END LOOP;
+END;
+/
+
+
+
+
+
+b]Null statement 
+CREATE OR REPLACE PROCEDURE divide_it(
+  p_numerator IN NUMBER,
+  p_denominator IN NUMBER,
+  p_result OUT NUMBER
+)
+IS
+BEGIN
+  IF p_denominator = 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Cannot divide by zero!');
+  ELSE
+    p_result := p_numerator / p_denominator;
+    DBMS_OUTPUT.PUT_LINE('Result: ' || p_result);
+  END IF;
+END divide_it;
+/
+ 
