@@ -1,0 +1,14 @@
+DECLARE 
+    l_loops number := 0;
+BEGIN
+    dbms_output.put_line('before my loop');
+    loop
+      if l_loops > 4 then 
+         exit;
+      end if;
+      dbms_output.put_line('Looped ' || l_loops || ' times');
+      l_loops := l_loops + 1;
+    end loop;
+    dbms_output.put_line('after my loop');
+end;
+/
